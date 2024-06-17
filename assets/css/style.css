@@ -6181,7 +6181,7 @@ textarea:hover {
 
 .home-4 {
     background-color: rgb(1,1,1);
-    color: rgba(255, 255, 255, .7)
+    color: rgb(255, 255, 255)
 }
 
 .bi-btn-4 a {
@@ -6250,11 +6250,7 @@ textarea:hover {
     font-size: 153px;
     font-weight: 700;
     text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .28)), to(rgba(27, 28, 53, .44)));
-    background: linear-gradient(180deg, rgba(255, 255, 255, .28) 0, rgba(27, 28, 53, .44) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+   
 }
 
 .bi-footer-cta.blue-footer:before {
@@ -6658,7 +6654,7 @@ background: linear-gradient(270deg, rgba(26,13,25,1) 0%, rgba(69,1,50,0.66167717
 }
 
 .bi-text-scroll-item-1 h3 {
-    font-size: 150px;
+    font-size: 90px;
     font-weight: 700;
     margin: 0 20px;
     display: inline-block;
@@ -7153,7 +7149,7 @@ background: linear-gradient(270deg, rgba(26,13,25,1) 0%, rgba(69,1,50,0.66167717
 
 .bi-portfolio-section-4 .bi-title-waterprint,
 .bi-testimonial-section-4 .bi-title-waterprint {
-    margin-bottom: -50px
+    margin-bottom: -6px
 }
 
 .bi-portfolio-section-4 .bi-section-title-4 {
@@ -7978,7 +7974,7 @@ background: linear-gradient(270deg, rgba(26,13,25,1) 0%, rgba(69,1,50,0.66167717
 }
 
 .hap-section-title h2 {
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 700;
     color: var(--hap-title-color)
 }

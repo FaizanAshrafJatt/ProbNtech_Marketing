@@ -159,33 +159,35 @@
                     nullTargetWarn: !1
                 });
                 gsap.utils.toArray(".headline-title").forEach(e => {
-                    let i = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: e,
-                                start: "top 90%",
-                                end: "bottom 60%",
-                                scrub: !1,
-                                markers: !1,
-                                toggleActions: "play none none none"
-                            }
-                        }),
-                        t = new SplitText(e, {
-                            type: "words, lines"
-                        });
+                    let tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: e,
+                            start: "top 90%",
+                            end: "bottom 60%",
+                            scrub: false,
+                            markers: false,
+                            toggleActions: "play none none none"
+                        }
+                    });
+                
+                    let splitText = new SplitText(e, {
+                        lines: true, // Split by lines only
+                        whitespace: true // Preserve whitespace
+                    });
+                
                     gsap.set(e, {
                         perspective: 400
-                    }), t.split({
-                        type: "lines"
-                    }), i.from(t.lines, {
+                    });
+                
+                    tl.from(splitText.lines, {
                         duration: 1,
-                        delay: .3,
+                        delay: 0.3,
                         opacity: 0,
-                        rotationX: -80,
-                        force3D: !0,
-                        transformOrigin: "top center -50",
-                        stagger: .1
-                    })
-                }), $(".bi-btn-hover").on("mouseenter", function(e) {
+                        y: 50, // Adjust the animation as needed
+                        stagger: 0.1
+                    });
+                })  
+                , $(".bi-btn-hover").on("mouseenter", function(e) {
                     var i = e.pageX - $(this).offset().left,
                         t = e.pageY - $(this).offset().top;
                     $(this).find("span").css({
@@ -888,7 +890,7 @@
                     });
                     h.observe(l), m.mouse.element.removeEventListener("mousewheel", m.mouse.mousewheel), m.mouse.element.removeEventListener("DOMMouseScroll", m.mouse.mousewheel)
                 }
-                let w = ["User Interface Design", "Digital Marketing", "Lack of Brand Differentiation", "Application Development", "Application Development", "Scaling Difficulties", "Application Development", "Outdated Designs", "Products Designs", "Branding Designs", "3D Animations", "3D Illustration Design", "Web Application Development", "User Interface Design", ]
+                let w = ["Low Online Visibility", "Poor Website Traffic", "Limited Social Media Reach", "Ineffective SEO Strategies", "Weak Brand Awareness", "Obsolete Website Design", "Lack of Content Strategy", "Inefficient Lead Generation", "Minimal Online Engagement", "Competitive Market Positioning", "Underperforming Digital Campaigns", "Suboptimal Conversion Rates", "Insufficient Customer Retention Strategies", "Ineffective Email Marketing Campaigns", ]
             },
             PortfolioFilterImage: function() {
                 jQuery(window).on("load", function() {
